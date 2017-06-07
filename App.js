@@ -30,9 +30,15 @@ export default class App extends React.Component {
         source={{uri: src}}
       />
     ))
+    let button = (
+      <View key='button' style={{borderWidth:3, borderColor:'blue', height:50, width: 100}}>
+        <Text>Click me!</Text>
+      </View>
+    );
+    images.push(button)
     return (
       <View style={styles.custom}>
-        <FlipFlop style={styles.container}>
+        <FlipFlop style={styles.container} vert={true} horiz={false}>
           {images}
         </FlipFlop>
         </View>
@@ -44,7 +50,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // alignSelf:'center',
-    backgroundColor: '#fff',
+    backgroundColor: 'green',
     flexDirection:'row'
   },
   custom:{
